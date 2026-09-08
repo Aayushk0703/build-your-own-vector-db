@@ -144,13 +144,6 @@ recall roughly constant as data grows means growing `M`/`efConstruction`
 with it — the graph parameters need to be sized to the dataset, not
 just to the k you care about.
 
-## Running it
-MAC
-
-python3 -m vectordb.demo                  # quick illustrated walkthrough
-python3 -m vectordb.tradeoff_experiment   # M/efConstruction tradeoff, ~2 min
-python3 -m vectordb.build_chunked         # builds the 50k HNSW index (run repeatedly to resume)
-python3 -m vectordb.evaluate              # recall@10 + speed table against ground truth
 
 Running it
 
@@ -165,5 +158,19 @@ python -m vectordb.tradeoff_experiment
 python -m vectordb.build_chunked
 
 python -m vectordb.evaluate
+
+MAC
+
+pip3 install -r requirements.txt
+
+python3 -m vectordb.demo
+
+python3 -m vectordb.tradeoff_experiment
+
+python3 -m vectordb.build_chunked
+
+python3 -m vectordb.evaluate
+
+
 
 
